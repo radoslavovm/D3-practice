@@ -1,14 +1,14 @@
-Land Cover Types, Mystic, Charles and Neponset, Weir, Islands
-NWI marine wetlands, 1298.80, 671.41, 3990.23, 583.86 
-Salt marsh, 46.80, 108.44, 255.73, 11.72 
-Freshwater Wetland, 94.30, 40.80, 99.92, 11.18
-City parks, 1214.70, 4217.98, 790.60, 5.69
-Beach, 35.25, 40.54, 137.04, 0.34
-Freshwater, 786.24, 752.14, 33.22, 0.00
-Oyster bed, 0.00, 0.00, 104.69, 0.00
-Estuary, 86.48, 115.20, 113.75, 0.00
-Tidal flat, 6.68, 5.60, 10.00, 5.60
-Forest, 4574.30, 54864.48, 5793.51, 198.98
-Grassland/Openland, 491.03, 1631.93, 522.45, 73.90
-Core habitats, 1822.92, 18031.26, 5736.91, 72.60
-Coastal waters, 5985.33, 2800.69, 10167.73, 9109.77
+LandCoverTypes,Mystic,CharlesandNeponset,Weir,Islands
+NWImarinewetlands,1298.80,671.41,3990.23,583.86
+Saltmarsh,46.80,108.44,255.73,11.72
+FreshwaterWetland,94.30,40.80,99.92,11.18
+Cityparks,1214.70,4217.98,790.60,5.69
+Beach,35.25,40.54,137.04,0.34
+Freshwater,786.24,752.14,33.22,0.00
+Oysterbed,0.00,0.00,104.69,0.00
+Estuary,86.48,115.20,113.75,0.00
+Tidalflat,6.68,5.60,10.00,5.60
+Forest,4574.30,54864.48,5793.51,198.98
+Grassland/Openland,491.03,1631.93,522.45,73.90
+Corehabitats,1822.92,18031.26,5736.91,72.60
+Coastalwaters,5985.33,2800.69,10167.73,9109.77
