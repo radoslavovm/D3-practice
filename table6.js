@@ -22,24 +22,24 @@ var yAxis = d3.svg.axis()
     .orient("left")
     .tickFormat(d3.format(".2s"));
 
-var svg = d3.select("#d3-table3").append("svg")
+var svg2 = d3.select("#d3-table6").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("table3.csv", function(error, data) {
-  var land = d3.keys(data[0]).filter(function(key) { return key !== ["LandCoverTypes"]; });
+d3.csv("table6.csv", function(error, data) {
+  var land = d3.keys(data[0]).filter(function(key) { return key !== ["cleanup"]; });
 
   data.forEach(function(d) {
     d.area = land.map(function(name) { return {name: name, value: +d[name]}; });
   });
 
-  x0.domain(data.map(function(d) { return d["LandCoverTypes"]; }));
+  x0.domain(data.map(function(d) { return d["cleanup"]; }));
   x1.domain(land).rangeRoundBands([0, x0.rangeBand()]);
   y.domain([0, d3.max(data, function(d) { return d3.max(d.area, function(d) { return d.value; }); })]);
 
-  svg.append("g")
+  svg2.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis).selectAll("text")
@@ -48,7 +48,7 @@ d3.csv("table3.csv", function(error, data) {
       .attr("transform", "rotate(90)")
       .style("text-anchor", "start");
 
-  svg.append("g")
+  svg2.append("g")
       .attr("class", "y axis")
       .call(yAxis)
     .append("text")
@@ -58,11 +58,11 @@ d3.csv("table3.csv", function(error, data) {
       .style("text-anchor", "end")
       .text("Population");
 
-  var state = svg.selectAll(".LandCoverTypes")
+  var state = svg2.selectAll(".cleanup")
       .data(data)
     .enter().append("g")
       .attr("class", "g")
-      .attr("transform", function(d) { return "translate(" + x0(d["LandCoverTypes"]) + ",0)"; });
+      .attr("transform", function(d) { return "translate(" + x0(d["cleanup"]) + ",0)"; });
 
   state.selectAll("rect")
       .data(function(d) { return d.area; })
@@ -73,7 +73,7 @@ d3.csv("table3.csv", function(error, data) {
       .attr("height", function(d) { return height - y(d.value); })
       .style("fill", function(d) { return color(d.name); });
 
-  var legend = svg.selectAll(".legend")
+  var legend = svg2.selectAll(".legend")
       .data(land.slice().reverse())
     .enter().append("g")
       .attr("class", "legend")

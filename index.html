@@ -1,18 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <meta charset="utf-8">
-<html>
-  <head>
-    <title>Boston Harbor Cleanup project</title>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .rect:hover { opacity: 0.5; }
-    </style>
-  </head>
-
-  <body>
+<style>
+body {
+  font: 10px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.x.axis path {
+  display: none;
+}
+</style>
+<head>
     <div style="text-align: center;">
       <h1>SUMMARY</h1>
       <p>
@@ -21,15 +23,29 @@
         Valuation of non-market goods is one of the main challenged for this study, as economic value is a social construct. 
         The valuation methods are described and seperated by land areas as well as the estimate valuations for each area.
       </p>
-
-      <h1>Bar Charts</h1>
-      <div id="d3-container">
-      </div>
-    
     </div>
-
-
-    <script src="table3.js"></script>
-    
-  </body>
+    </head>
+<body>
+      <h1>Bar Charts</h1>
+      <div id="d3-table3">
+        <p>
+          Table3
+        </p>
+      </div>
+      <div id="d3-table5">
+        <p>
+          Table5
+        </p>
+      </div>
+      <div id="d3-table6">
+        <p>
+          Table6
+        </p>
+      </div>
+      <script src="http://d3js.org/d3.v3.min.js"></script>
+      <script src="table3.js"></script> 
+      <script src="table5.js"></script> 
+      <script src="table6.js"></script> 
+    </div>
+</body>
 </html>
